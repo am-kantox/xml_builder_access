@@ -61,7 +61,7 @@ defmodule Iso20022.MixProject do
       files: ~w(lib .formatter.exs .dialyzer/ignore.exs mix.exs README*),
       maintainers: ["Aleksei Matiushkin"],
       licenses: ["Kantox LTD"],
-      links: %{"GitHub" => "https://github.com/kantox/#{@app}"}
+      links: %{"GitHub" => "https://github.com/am-kantox/#{@app}"}
     ]
   end
 
@@ -69,7 +69,7 @@ defmodule Iso20022.MixProject do
     [
       main: "XmlBuilder.Access",
       source_ref: "v#{@version}",
-      source_url: "https://github.com/kantox/#{@app}",
+      source_url: "https://github.com/am-kantox/#{@app}",
       canonical: "http://hexdocs.pm/#{@app}",
       extras: ["README.md"],
       groups_for_modules: []
