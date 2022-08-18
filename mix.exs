@@ -2,13 +2,13 @@ defmodule Iso20022.MixProject do
   use Mix.Project
 
   @app :xml_builder_access
-  @version "0.1.0"
+  @version "1.0.0"
 
   def project do
     [
       app: @app,
       version: @version,
-      elixir: "~> 1.6",
+      elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       package: package(),
@@ -37,7 +37,6 @@ defmodule Iso20022.MixProject do
     [
       quality: ["format", "credo --strict", "dialyzer", "test"],
       "quality.ci": [
-        "test",
         "format --check-formatted",
         "credo --strict",
         "dialyzer --halt-exit-status"
@@ -48,9 +47,9 @@ defmodule Iso20022.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:xml_builder, "~> 2.0"},
+      {:xml_builder_ex, "~> 3.0"},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0.0-rc.6", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:earmark, ">= 0.0.0", only: :dev},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
